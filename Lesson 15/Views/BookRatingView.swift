@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookRatingView: View {
     
-    @State var book: Book
+    @ObservedObject var book: Book
 
     var body: some View {
         
@@ -35,18 +35,12 @@ struct BookRatingView: View {
                     Text("Mark for later:")
                         .bold()
                         .padding(.bottom, 10)
-                       
-                        
-                        
-                Image(systemName: book.isFavourite ? "star.fill": "star")
-                        .renderingMode(.original)
-                        .font(.system(size: 30, weight: .medium))
-                        .padding(.bottom, 30)
-                        .onTapGesture {
-                            book.isFavourite = !book.isFavourite
-                        }
+
                 
                 
+                    
+
+
                
                 Text("Rate \(book.title)")
                         .bold()
@@ -60,8 +54,11 @@ struct BookRatingView: View {
                     .padding(.horizontal)
                         
             }
-        }.padding(30)
+        
+        }.padding(.horizontal,30)
     }
+    
+    
 }
 
 struct BookRatingView_Previews: PreviewProvider {

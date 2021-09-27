@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Book: Identifiable, Decodable {
+class Book: ObservableObject, Identifiable, Decodable {
     var id: Int
     var title: String
     var author: String

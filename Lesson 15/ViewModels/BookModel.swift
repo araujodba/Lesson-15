@@ -15,10 +15,13 @@ class BookModel: ObservableObject {
         for r in 0..<books.count {
             books[r].image  = "cover" + String(r + 1)
         }
-//        for book in books {
-//            print(book.author)
-//            print(book.title)
-//            print(book.image!)
-//        }
+    }
+    static func updateFavorite(book: Book) {
+        if book.isFavourite {
+            book.isFavourite = false
+        }
+        else {
+            book.isFavourite = true
+        }
     }
 }
