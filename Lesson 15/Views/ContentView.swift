@@ -16,48 +16,43 @@ struct ContentView: View {
             NavigationView {
                 ScrollView {
                     VStack {
-                        ForEach (model.books) { item in
+                        ForEach (0..<model.books.count) { index in
                         
-                            NavigationLink(destination: BookRatingView(book: item)) {
-                                ZStack (alignment:.topLeading) {
+                            NavigationLink(destination: BookRatingView(model: model, indexModel: index)) {
+                                ZStack (alignment:.center) {
                                     RoundedRectangle(cornerRadius: 25)
                                         .padding()
                                         .shadow(color: Color.black.opacity(0.5), radius: 10, x: -4, y: 8)
                                         .shadow(color: Color.black.opacity(0.3), radius: 5, x: 1, y: 1)
                                         .foregroundColor(.white)
                                         
-                                    VStack (alignment:.leading) {
-                                        Spacer()
-                                        Text(item.title).font(.title).bold()
-                                        Spacer()
-                                        Text(item.author).font(.title2).italic()
-                                        Image(item.image!).resizable().scaledToFit()
-                                    }.padding(40)
-                                }.frame(width: geo.size.width, height: 700, alignment: .top)
+                                    VStack {
+                                        VStack (alignment:.leading) {
+                                            HStack {
+                                                Text(model.books[index].title).font(.headline).bold()
+                                                Spacer()
+                                                Toggle("", isOn: $model.books[index].isFavourite)
+                                                    .toggleStyle(ToggleStyleView.CheckToggleStyle())
+                                            }
+                                            Text(model.books[index].author).font(.subheadline).italic()
+                                            
+                                        }
+                                        Image(model.books[index].image!).resizable().scaledToFit()
+                                    }.padding(30)
+                                    
+                                    
+                                    
+                                    
+                                }.frame(width: geo.size.width - 15, height: 2 * geo.size.height / 3, alignment: .top)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
                             }
                         }
                     }
                 }.navigationTitle("My Library")
+                
             }
        }
-    }
-    
-    struct CheckToggleStyle: ToggleStyle {
-        func makeBody(configuration: Configuration) -> some View {
-            Button {
-                configuration.isOn.toggle()
-            } label: {
-                Label {
-                    configuration.label
-                } icon: {
-                    Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
-                        .foregroundColor(configuration.isOn ? .accentColor : .secondary)
-                        .accessibility(label: Text(configuration.isOn ? "Checked" : "Unchecked"))
-                        .imageScale(.large)
-                }
-            }
-            .buttonStyle(PlainButtonStyle())
-        }
     }
 }
 

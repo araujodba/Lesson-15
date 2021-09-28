@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97A54F8E2701F80C00760E54 /* BookRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A54F8D2701F80C00760E54 /* BookRatingView.swift */; };
+		97A54F902702956A00760E54 /* ToggleStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A54F8F2702956A00760E54 /* ToggleStyleView.swift */; };
 		97B50D58270121080050B308 /* Lesson_15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B50D57270121080050B308 /* Lesson_15App.swift */; };
 		97B50D5A270121080050B308 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B50D59270121080050B308 /* ContentView.swift */; };
 		97B50D5C2701210B0050B308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B50D5B2701210B0050B308 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		97A54F8D2701F80C00760E54 /* BookRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRatingView.swift; sourceTree = "<group>"; };
+		97A54F8F2702956A00760E54 /* ToggleStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyleView.swift; sourceTree = "<group>"; };
 		97B50D54270121080050B308 /* Lesson 15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B50D57270121080050B308 /* Lesson_15App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson_15App.swift; sourceTree = "<group>"; };
 		97B50D59270121080050B308 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				97B50D59270121080050B308 /* ContentView.swift */,
 				97A54F8D2701F80C00760E54 /* BookRatingView.swift */,
+				97A54F8F2702956A00760E54 /* ToggleStyleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A54F902702956A00760E54 /* ToggleStyleView.swift in Sources */,
 				97A54F8E2701F80C00760E54 /* BookRatingView.swift in Sources */,
 				97B50D6F27012D640050B308 /* Book.swift in Sources */,
 				97B50D6D27012D320050B308 /* DataService.swift in Sources */,
