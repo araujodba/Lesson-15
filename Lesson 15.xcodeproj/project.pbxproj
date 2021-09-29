@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9778A68C27036CAA00203605 /* ReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778A68B27036CAA00203605 /* ReadingView.swift */; };
 		97A54F8E2701F80C00760E54 /* BookRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A54F8D2701F80C00760E54 /* BookRatingView.swift */; };
 		97A54F902702956A00760E54 /* ToggleStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A54F8F2702956A00760E54 /* ToggleStyleView.swift */; };
 		97B50D58270121080050B308 /* Lesson_15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B50D57270121080050B308 /* Lesson_15App.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9778A68B27036CAA00203605 /* ReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingView.swift; sourceTree = "<group>"; };
 		97A54F8D2701F80C00760E54 /* BookRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRatingView.swift; sourceTree = "<group>"; };
 		97A54F8F2702956A00760E54 /* ToggleStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyleView.swift; sourceTree = "<group>"; };
 		97B50D54270121080050B308 /* Lesson 15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				97B50D59270121080050B308 /* ContentView.swift */,
 				97A54F8D2701F80C00760E54 /* BookRatingView.swift */,
 				97A54F8F2702956A00760E54 /* ToggleStyleView.swift */,
+				9778A68B27036CAA00203605 /* ReadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A54F902702956A00760E54 /* ToggleStyleView.swift in Sources */,
+				9778A68C27036CAA00203605 /* ReadingView.swift in Sources */,
 				97A54F8E2701F80C00760E54 /* BookRatingView.swift in Sources */,
 				97B50D6F27012D640050B308 /* Book.swift in Sources */,
 				97B50D6D27012D320050B308 /* DataService.swift in Sources */,
@@ -330,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lesson 15/Preview Content\"";
@@ -349,6 +354,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Private.Lesson-15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -360,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lesson 15/Preview Content\"";
@@ -379,6 +386,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Private.Lesson-15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -14,54 +14,70 @@ struct BookRatingView: View {
 
     var body: some View {
         
-        VStack (alignment:.leading) {
-            Text(model.books[indexModel].title)
-                .font(.largeTitle)
-                .bold()
-                .padding(.bottom, 20)
-                
+        VStack(alignment:.leading) {
             
+                VStack (alignment: .center) {
+                    
+                    Text("Read Now!").font(.title)
 
-            VStack (alignment: .center) {
-                
-                Text("Read Now!").font(.title)
-
-                Image(model.books[indexModel].image!)
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.top, 5)
-                    .padding(.bottom, 25)
-            
-                
-                Text("Mark for later!")
-                    .bold()
+                    
+                    
+                    
+                        NavigationLink(destination: {
+                            ReadingView(model: model, indexModel:indexModel)
+                                
+                                
+                                })
+                            {
+                                    Image(model.books[indexModel].image!)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding(.top, 5)
+                                        .padding(.bottom, 25)
+                                        
+                                        
+                            }
+                    
+                    
+                        
                     
                 
-                Toggle("", isOn: $model.books[indexModel].isFavourite)
-                    .toggleStyle(ToggleStyleView.CheckToggleStyle())
-                    .padding(.bottom, 20)
-                    .padding(.top, 10)
-                
-                
                     
-
-
-               
-                Text("Rate \(model.books[indexModel].title)")
+                    Text("Mark for later!")
                         .bold()
-                Picker("", selection: $model.books[indexModel].rating) {
-                        Text("1").tag(1)
-                        Text("2").tag(2)
-                        Text("3").tag(3)
-                        Text("4").tag(4)
-                        Text("5").tag(5)
-                    }.pickerStyle(.segmented)
-                Spacer()
-            }
+                        
+                    
+                    Toggle("", isOn: $model.books[indexModel].isFavourite)
+                        .toggleStyle(ToggleStyleView.CheckToggleStyle())
+                        .padding(.bottom, 20)
+                        .padding(.top, 10)
+                    
+                    
+                        
+
+
+                   
+                    Text("Rate \(model.books[indexModel].title)")
+                            .bold()
+                    Picker("", selection: $model.books[indexModel].rating) {
+                            Text("1").tag(1)
+                            Text("2").tag(2)
+                            Text("3").tag(3)
+                            Text("4").tag(4)
+                            Text("5").tag(5)
+                        }.pickerStyle(.segmented)
+                    Spacer()
+                }
+                
+            
+            Spacer()
+                
         
         Spacer()
             
-        }.padding(.horizontal,30).padding(.vertical, 0)
+        }
+            .padding(.horizontal,30).padding(.vertical, 0)
+            .navigationTitle(Text(model.books[indexModel].title))
     }
     
     

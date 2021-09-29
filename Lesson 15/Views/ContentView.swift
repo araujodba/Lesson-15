@@ -47,6 +47,7 @@ struct ContentView: View {
                                     .foregroundColor(.black)
                                     .multilineTextAlignment(.leading)
                             }
+                            
                         }
                     }
                 }.navigationTitle("My Library")

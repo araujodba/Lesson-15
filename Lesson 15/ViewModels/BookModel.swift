@@ -16,14 +16,6 @@ class BookModel: ObservableObject {
             books[r].image  = "cover" + String(r + 1)
         }
     }
-    static func updateFavorite(book: Book) {
-        if book.isFavourite {
-            book.isFavourite = false
-        }
-        else {
-            book.isFavourite = true
-        }
-    }
 }
 
 
